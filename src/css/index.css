@@ -1,0 +1,587 @@
+html {
+    --navBtmHeight: 40px;
+    --advPadding: 0/*100px*/;
+    background-color: var(--color0);
+}
+
+.hr {
+    border: 0;
+    background-color: var(--color3);
+    height: 1px;
+    width: 100%;
+    margin: 0.5rem 0 !important;
+}
+
+.hr_adv {
+    border: 0;
+    background-color: var(--color3);
+    height: 1px;
+    width: 100%;
+}
+
+.common-main-box {
+    padding-top: var(--navBtmHeight);
+    padding-bottom: var(--advPadding);
+}
+
+.padding-btm {
+    padding-bottom: var(--navBtmHeight);
+}
+
+.testnav {
+    position: fixed;
+    background-color: var(--color8);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navBtmHeight);
+    z-index: 9000000;
+    color: var(--color0);
+}
+
+.nav-top {
+    position: fixed;
+    background-color: var(--color8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--navBtmHeight);
+    z-index: 900;
+    color: var(--color0);
+}
+
+.nav-top div {
+    height: 100%;
+    font-size: 22px;
+    width: 100%;
+    padding: 0 10px
+}
+
+.nav-top span {
+    font-size: 10px;
+    /*margin-top: 5px;*/
+}
+
+.nav-btm {
+    position: fixed;
+    background-color: var(--color0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(var(--navBtmHeight) + 1px);
+    z-index: 950;
+}
+
+.nav-btm div {
+    font-size: 30px;
+    width: 100%;
+    padding: 0 1px;
+}
+
+.common-visible {
+    display: block
+}
+
+.common-hidden {
+    display: none
+}
+
+.common-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color0);
+    opacity: 0.5;
+    z-index: 50000;
+    text-align: center;
+    padding-top: 30vh;
+}
+
+.common-preloader_err {
+    opacity: 0.9 !important;
+}
+
+.common-edit-list-one {
+    position: absolute;
+    top: calc(1.5rem + var(--navBtmHeight));
+    right: 5%;
+}
+
+.common-btn-mini {
+    background-color: var(--color0);
+    border-color: var(--color4);
+    color: var(--color4);
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5px;
+    min-width: 50px;
+}
+
+.common-btn-mini:hover {
+    background-color: var(--color1);
+}
+
+.common-btn-mini:focus {
+    background-color: var(--color1);
+}
+
+.common-btn-mini_ok {
+    background-color: var(--color0);
+    border-color: var(--color7);
+    color: var(--color7);
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 5px;
+    min-width: 50px;
+}
+
+.common-btn-mini_ok:hover {
+    background-color: var(--color1);
+    color: var(--color7);
+}
+
+.common-btn-mini_ok:focus {
+    background-color: var(--color1);
+    color: var(--color7);
+}
+
+.common-btn_article {
+    background-color: var(--color0) !important;
+    border-color: var(--color4) !important;
+    color: var(--color4) !important;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.common-btn_article:hover {
+    background-color: var(--color0) !important;
+}
+
+.common-btn_article:focus {
+    background-color: var(--color0) !important;
+}
+
+.common-btn_article:disabled:hover {
+    background-color: var(--color0) !important;
+    color: var(--color1) !important;
+    border-color: var(--color1) !important;
+}
+
+.common-btn-mini:disabled, 
+.common-btn-mini_ok:disabled, 
+.common-btn_article:disabled {
+    background-color: var(--color0) !important;
+    color: var(--color1) !important;
+    border-color: var(--color1) !important;
+}
+
+.common-quiz-btn_err:disabled,
+.common-quiz-btn_err:disabled:hover {
+    background-color: var(--color-warning1) !important;
+    border-color: var(--color-warning2) !important;
+    color: var(--color-warning3) !important;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.common-quiz-btn_ok:disabled,
+.common-quiz-btn_ok:disabled:hover {
+    background-color: var(--color-ok1) !important;
+    border-color: var(--color-ok2) !important;
+    color: var(--color-ok4) !important;
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.common-btn_del, 
+.common-btn_del:hover {
+    background-color: var(--color-warning4)
+}
+
+.common-btn_floating, 
+.common-btn_floating:hover,
+.common-btn_floating:focus {
+    background-color: var(--color4)
+}
+
+.common-btn_dict {
+    margin: 2px 1px !important;
+    width: 100%;
+}
+
+.common-btn_input {
+    font-size: 1.3rem;
+    margin: 0 0 8px 8px !important;
+}
+
+.common-float-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+/* ---------------------------- */
+
+.common-modal_keyboard {
+    width: 100%;
+    border-radius: 0;
+    top: 0 !important;
+    background-color: var(--color0);
+    bottom: 0;
+    max-height: 100% !important;
+}
+
+.common-sidenav_ico {
+    margin-right: 1rem !important;
+}
+
+.common-warning_bg {
+    background-color: var(--color-warning4)
+}
+
+.common-warning_text {
+    color: var(--color-warning4)
+}
+
+.common-adv_text {
+    color: var(--color3)
+}
+
+.common-vh100p {
+    height: 100vh !important;
+    padding-top: var(--navBtmHeight);
+    margin-top: calc(-1 * var(--navBtmHeight));
+}
+
+.common-text_green{
+    color: var(--color-ok4)
+}
+
+.common-text_red {
+    color: var(--color-warning4)
+}
+
+.common-text_grey {
+    color: var(--color4);
+}
+
+.common-btn-enter {
+    margin: 15px 0 !important;
+}
+
+.common-btn_modal-warning {
+    color: var(--color-warning4);
+}
+
+.common-btn_dict-word-view {
+    color: var(--color4);
+    margin-left: 1rem !important;
+}
+
+/* ----------------- */
+
+.common-quiz_main-word {
+    overflow-wrap: break-word;
+}
+
+.common-quiz_main-ts {
+    color: var(--color4);
+}
+
+.common-dict-word-block {
+    min-height: 3rem;
+    margin: 0 !important;
+}
+
+.common-lists-list-block {
+    position: relative;
+    min-height: 5rem;
+    margin: 0 !important;
+    padding-bottom: 0.5rem !important;
+    margin-bottom: -0.5rem !important;
+}
+
+.common-subtitle {
+    margin: 10px 0 15px 0;
+}
+
+.common-center {
+    text-align: center !important;
+}
+
+.common-auth {
+    margin-top: calc(-1 * var(--navBtmHeight));
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color0);
+    z-index: 20000;
+}
+
+.common-info_message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh !important;
+    width: 100vw;
+    background-color: var(--color0);
+    z-index: 25000 !important;
+}
+
+.common-adv_message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--color0);
+    z-index: 1000 !important; 
+}
+
+.common-error_modal {
+    z-index: 30000 !important;
+}
+
+.common-error_modal ~ .modal-overlay {
+    z-index: 29000 !important;
+}
+
+.common-link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--color-link);
+}
+
+.common-color_lighter {
+    color: var(--color3)
+}
+
+.common-color_ok5 {
+    color: var(--color-ok5)
+}
+
+.common-color-bg_ok2 {
+    background-color: var(--color-ok2) !important;
+}
+
+.common-color-orange3 {
+    color: var(--color-orange3)
+}
+
+.common-progress_line {
+    position: absolute;
+    height: 15px;
+    width: 1px;
+    background-color: var(--color0);
+    top: 0;
+    z-index: 1;
+}
+
+.common-quiz-stat-determinate {
+    background-color: var(--color-orange3) !important;
+}
+
+.common-cursor_pointer {
+    cursor: pointer;
+}
+
+.common-create-mod {
+    color: var(--color3);
+    font-size: 0.8rem;
+}
+
+.common-create-mod_dark {
+    color: var(--color2);
+    font-size: 0.8rem;
+}
+
+.common-word-options-panel {
+    width: 30%;
+    height: 3.5rem;
+    text-align: center;
+}
+
+.common-word-options-panel_text{
+    font-size: 1.2rem;
+}
+
+.common-word-options-panel_caption {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.common-word-options-panel_saparate {
+    height: 3rem;
+    width: 1px;
+    background-color: var(--color1);
+}
+
+.common-word-options-status {
+    height: 0.7rem;
+    width: 0.7rem;
+    border-radius: 0.7rem;
+    margin-right: 0.4rem;
+}
+
+.common-word-options-status_left {
+    background-color: var(--color1);
+}
+
+.common-word-options-status_passed {
+    background-color: var(--color-ok4);
+}
+
+.common-word-options-modifided {
+    position: relative;
+    display: inline-block;
+    font-size: 0.6rem;
+    background-color: var(--color-warning4);
+    padding: 0rem 0.2rem;
+    margin-left: 0.5rem;
+    border-radius: 0.1rem;
+    color: var(--color0);
+    bottom: 0.1rem;
+}
+
+.common-quiz-btn_color {
+    background-color: var(--color-ok8) !important;
+}
+
+/* Styles for collections markers */
+.common-collect-marker {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    bottom: 0;
+    width: 0.5rem;
+}
+
+.common-collect-marker_red {
+    background-color: var(--color-warning3)
+}
+
+.common-collect-marker_orange {
+    background-color: var(--color-orange3)
+}
+
+.common-collect-marker_green {
+    background-color: var(--color-ok3)
+}
+
+.common-collect-marker_blue {
+    background-color: var(--color-blue3)
+}
+
+.common-collect-marker_purple {
+    background-color: var(--color-purple3)
+}
+
+.common-collect-marker_none {
+    border: 1px solid var(--color2);
+}
+
+.common-checkbox-panel {
+    width: 0.5rem;
+    height: 3rem;
+    margin-right: 0.8rem;
+}
+
+.common-docs-nav_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.common-docs_content {
+    color: var(--color5);
+    margin-top: 2.5rem;
+}
+
+.ml-1rem {
+    margin-left: 1rem;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mt-20 {
+    margin-top: 20px !important;
+}
+
+.mt-25 {
+    margin-top: 25px !important;
+}
+
+.mt-3rem {
+    margin-top: 3rem !important;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-25 {
+    margin-bottom: 25px !important;
+}
+
+.mb-1rem {
+    margin-bottom: 1rem !important;
+}
+
+.mb-2rem {
+    margin-bottom: 2rem !important;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.h100 {
+    height: 100%
+}
+
+.w100 {
+    width: 100%;
+}
+
+.ml0
+{
+    margin-left: 0 !important;
+}
+
+.ml-10
+{
+    margin-left: 16px !important;
+}
+
+[date-checkbox-quiz="checkbox-quiz"]:checked + span:not(.lever):before {
+    border-right: 2px solid var(--color-orange3);
+    border-bottom: 2px solid var(--color-orange3);
+}
+
+
+

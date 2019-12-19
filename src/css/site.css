@@ -1,0 +1,40 @@
+.site-specialTextBlok {
+    padding: 0.5rem 0 0 0;
+}
+
+/* Vendors */
+blockquote {
+    border-left: 5px solid var(--color2);
+}
+
+.page-footer {
+    background-color: var(--color6);
+}
+
+.footer-copyright {
+    background-color: var(--color8) !important;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.8rem;
+      }
+
+    h4 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+    font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+    }
+
+    h5 {
+        font-size: 1.3rem;
+    }
+}

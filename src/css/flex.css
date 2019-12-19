@@ -1,0 +1,86 @@
+/* ---------------------------------------------------------------- */
+/* ------ стили для flexbox с поддержкой кроссбраузерности -------- */
+/* ---------------------------------------------------------------- */
+
+.flex__common {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex__justify-content {
+    -ms-flex-pack: justify;
+    -ms-flex-pack: space-between;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.flex__justify-content-center {
+	-ms-flex-pack: center; 
+	-ms-flex-pack: center; 
+    -webkit-box-pack: center; 
+    -webkit-justify-content: center; 
+	justify-content: center;
+}
+
+.flex__justify-content-end {
+	-ms-flex-pack: flex-end; 
+	-ms-flex-pack: flex-end; 
+    -webkit-box-pack: flex-end; 
+    -webkit-justify-content: flex-end; 
+	justify-content: flex-end;
+}
+
+.flex__align-items-baseline {
+    -webkit-align-items: baseline;
+	-moz-align-items: baseline;
+	-ms-align-items: baseline;
+	align-items: baseline;
+}
+
+.flex__align-items-center {
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.flex__wrap {
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.flex__vertical-dirertion {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-box-direction: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	/*-webkit-flex-flow: column nowrap;*/
+	flex-direction: column;
+}
+.flex__grow-1 {
+    -ms-flex-positive: 1;
+    -webkit-flex-grow: 1;
+    flex-grow: 1;
+}
+.flex__grow-2 {
+	-ms-flex-positive: 2;
+	-webkit-flex-grow: 2;
+	flex-grow: 2;
+}
+.flex__grow-3 {
+    -ms-flex-positive: 3;
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+}
+
+.flex-fill {
+    -ms-flex: 1 1 auto !important;
+    flex: 1 1 auto !important;
+  }
