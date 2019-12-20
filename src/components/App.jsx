@@ -18,26 +18,25 @@ class App extends Component {
 
   getLocalLang() {
     let firstRender = this.firstRender
-    // lastRoute ? this.firstRender = false : this.firstRender = true
     return(
       firstRender
-      ?
-      (
+        ?
         (
-          navigator.languages 
-          && 
-          navigator.languages.length
-        ) 
-        ? 
-        navigator.languages[0] 
-        : 
-        navigator.userLanguage 
-        || navigator.language 
-        || navigator.browserLanguage 
-        || 'en'
-      )
-      :
-      'en'
+          (
+            navigator.languages 
+            && 
+            navigator.languages.length
+          ) 
+          ? 
+          navigator.languages[0] 
+          : 
+          navigator.userLanguage 
+          || navigator.language 
+          || navigator.browserLanguage 
+          || 'en'
+        )
+        :
+        'en'
     )
   }
 
