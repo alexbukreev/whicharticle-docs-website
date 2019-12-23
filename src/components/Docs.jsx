@@ -91,7 +91,7 @@ class Docs extends Component {
                         The «Remember me» setting can always be changed in the <a href="#pref">«Preferences»</a> tab within the application itself.
                       </p>,
                       <p>
-                        If your account password is entered incorrectly, a «Wrong password» message will appear under the input field. Below it you will see a link — upon tapping it a new valid password will be sent to you by e-mail. Use that password to sign into your account. The password can be changed in the <a href="#pref">«Preferences»</a> tab.
+                        If your account password is entered incorrectly, a «Wrong password» message will appear under the input field. Below it you will see a link — upon tapping it, a new valid password will be sent to you by e-mail. Use that password to sign into your account. The password can be changed in the <a href="#pref">«Preferences»</a> tab.
                       </p>,
                       <p>
                         If you have not received the e-mail within several minutes, please check the «spam» folder in your e-mail.
@@ -122,183 +122,191 @@ class Docs extends Component {
                 
                 <section id="maincollection" className="section scrollspy">
                   <div>
-                    <h4>Коллекции</h4>
+                    <h4>Collections</h4>
                     <p>
-                      Интерфейс «Коллекции» («Collections») это интерфес с которого стартует приложение. Тут содержится список всех созданных пользователем коллекций.
+                      The «Collections» interface is the starting interface of the app. It contains all the collections created by the user.
                     </p>
                     <h6 className="common-docs_content">Section contents</h6>
                     <ul>
-                      <li><a href="#createnewcollection">Создание новой коллекции</a></li>
-                      <li><a href="#attributeofcollection">Свойства коллекции</a></li>
-                      <li><a href="#menage_words_in_collection">Элементы управления коллекцией</a></li>
-                      <li><a href="#choose_words_for_collection">Добавление слов в коллекцию</a></li>
-                      <li><a href="#sort_words_in_collection">Сортировка слов в коллекции</a></li>
-                      <li><a href="#change_words_in_collection">Управление словами в коллекции</a></li>
-                      <li><a href="#translate_words_in_collection">Изменение перевода слова</a></li>
-                      <li><a href="#stats_words_in_collection">Статистика слов в коллекции</a></li>
+                      <li><a href="#createnewcollection">Creating a new collection</a></li>
+                      <li><a href="#attributeofcollection">Collection preferences</a></li>
+                      <li><a href="#menage_words_in_collection">Elements of collection management</a></li>
+                      <li><a href="#choose_words_for_collection">Adding words to a collection</a></li>
+                      <li><a href="#sort_words_in_collection">Word sorting in a collection</a></li>
+                      <li><a href="#change_words_in_collection">Managing words in a collection</a></li>
+                      <li><a href="#translate_words_in_collection">Changing a word’s translation</a></li>
+                      <li><a href="#stats_words_in_collection">Word statistics in a collection</a></li>
                     </ul>
                   </div>
 
                   <DocsBlock
                     id={"createnewcollection"}
-                    title = {'Создание новой коллекции'}
+                    title = {'Creating a new collection'}
                     img = {[`${Config.uri}/res/docs/003.gif`]}
                     body = {[
                       <p>
-                        Для создании новой коллекции нажмите на круглую кнопку с символом «+». После чего откроется окно редактирования <a href="#attributeofcollection">свойств коллекции</a>. 
+                        To create a new collection click the round button with a «+» on it. After that, a <a href="#attributeofcollection">collection preferences window</a> will open.
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"attributeofcollection"}
-                    title = {'Свойства коллекции'}
+                    title = {'Collection preferences'}
                     img = {[`${Config.uri}/res/docs/004.gif`]}
                     body = {[
                       <p>
-                        Первой строкой задается название коллекции, второй ее описание. Далее можно выбрать цветовой лейбл для коллекции, которым она будет отмечена в списке среди других коллекций. 
+                        The name of the collection is set by the first line, while its description is set by the second one. Below you can select a colour label for the collection, which it will be marked with on the list among other collections.
                       </p>,
                       <p>
-                        Имя коллекции уникально. Создать две коллекции с одинаковым именем не получится. 
+                        The collection name is unique. Creating two collections with the same name is not possible. 
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"menage_words_in_collection"}
-                    title = {'Элементы управления коллекцией'}
+                    title = {'Elements of collection management'}
                     img = {[`${Config.uri}/res/docs/005.gif`]}
                     body = {[
                       <p>
-                        После создания коллекции открывается окно созданной коллекции. Тут пока нет слов. Вверху находится название и описание коллекции, также слева ее цветовой лейбл (если он установлен в <a href="#attributeofcollection">свойствах коллекции</a>).  
+                        New collection window will open after a collection has been created. There are no words here yet. The name and the description of the collection are displayed at the top. A colour label is displayed on the top left (if it has been set in the <a href="#attributeofcollection">collection preferences</a>). 
                       </p>,
                       <p>
-                        Справа вверху кнопка редактирования коллекции, при нажатии на которой открывается <a href="#attributeofcollection">то же окно</a>, что открывалось при создании коллекции.   
+                        On the top right is the collection edit button, pressing which will open the <a href="#attributeofcollection">same window</a> as during the collection creation.   
                       </p>,
                       <p>
-                        Далее идут даты создания и изменения коллекции. причём дата изменения коллекции меняется только если меняется статус хотя бы одного слова после <a href="#mainquiz">тестирования</a>. При добавлении, удалении или обновлении статуса какого-либо слова дата изменения коллекции остается прежней. По существу, изменение коллекции отображает дату последней работы с коллекцией в Тесте.  
+                        Below are the dates of creation and the last modification of the collection. It is worth noting, that the date of modification only changes if the status of at least one of the words in the collection has changed after the <a href="#mainquiz">«quiz»</a>. This date stays the same upon addition, deletion, or status update of a word. Essentially, status «Modified» reflects the date of the most recent Quiz session with the collection.
                       </p>,
                       <p>
-                        Далее идет статистика слов в коллекции. Затем, кнопка «Тест» («To Quiz», запускает <a href="#mainquiz">тестирование</a>), кнопка <a href="#choose_words_for_collection">добавления слов в коллекцию</a> (кнопка со знаком «+»), кнопка «Обновить все» («Refresh All»), кнопка «Удалить» («Delete»).
+                        Below the dates are the collection statistics, followed by the «To Quiz» button (to start the <a href="#mainquiz">quiz</a>), the «+» button (<a href="#choose_words_for_collection">to add words to the collection</a>), the «Refresh All» button, the «Delete» button.
                       </p>,
                       <p>
-                        Кнопка «Обновить все» («Refresh All») обнуляет <a href="#stats_words_in_collection">статистику</a> для всех слов в коллекции. Кнопка «Удалить» («Delete») удаляет текущую коллекцию.
+                        The «Refresh All» button resets the <a href="#stats_words_in_collection">statistics</a> for all the words in the collection. The «Delete» button deletes the current collection.
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"choose_words_for_collection"}
-                    title = {'Добавление слов в коллекцию'}
+                    title = {'Adding words to a collection'}
                     img = {[`${Config.uri}/res/docs/006.gif`]}
                     body = {[
                       <p>
-                        Окно добавления слов в коллекцию открывается из <a href="#menage_words_in_collection">окна коллекции</a>.  
+                        The window for adding words to the collection can be opened from the <a href="#menage_words_in_collection">collection window</a>.
                       </p>,
                       <p>
-                        Сверху расположены кнопки «Отмена» («Cancel») и «Добавить» («Add»). Кнопка «Добавить» («Add») доступна только если хотя бы одно слово было выбрано. При ее нажатии открывается окно коллекции с выбранными словами. Если в коллекции до этого были еще слова, то выбранные слова добавляются к существующим согласно установленной <a href="#sort_words_in_collection">сортировки</a>.
+                        At the top are the buttons «Cancel» and «Add». The «Add» button is only accessible if at least one word has been selected. When pressed, the button opens the collection window with the selected words included on the list of words. If the collection contained any other words before that, the selected words are added to the existing ones and displayed according to the set <a href="#sort_words_in_collection">sorting</a>.
                       </p>,
                       <p>
-                        Максимальное число слов в коллекции 34.
+                        The maximum number of words in a collection is 34.
                       </p>,
                       <p>
-                        По существу окно добавление слов в коллекцию представляет собой интерфейс <a href="#dict">словаря</a> с возможностью выбора слов с помощью чекбоксов. Подробнее о поиске слов в словаре и добавление новых слов словарь смотрите раздел <a href="#dict">«Словарь»</a> данного руководства.
+                        The window for adding words to the collection is essentially a <a href="#dict">dictionary</a> interface with the possibility to select words using checkboxes. For more information on word search in the dictionary refer to the <a href="#dict">«Dictionary»</a> section of this guide.
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"sort_words_in_collection"}
-                    title = {'Сортрировка слов в коллекции'}
+                    title = {'Word sorting in a collection'}
                     img = {[`${Config.uri}/res/docs/007.gif`]}
                     body = {[
                       <p>
-                        В коллекции доступна сортировка слов по трем параметрам: 
+                        In a collection, word sorting by three parameters is available: 
                       </p>,
                       <p>
-                        <b>По алфавиту</b> (Noun).  
+                        <strong>Alphabetically</strong> (Noun).  
                       </p>,
                       <p>
-                        <b>По числу угаданных попыток подряд</b> (Score). Удобно применять, если нужно отделить выученные слова от еще на выученных.
+                        <strong>By the number of correct guesses in a row</strong> (Score). Especially convenient if you need to separate the words you have already know well from the words you don’t.
                       </p>,
                       <p>
-                        <b>По числу допущенных  ошибок</b> (Mistakes). Удобно применять, когда нужно рассортировать слова в порядке их сложности для запоминания артиклей.
+                        <strong>By the number of mistakes</strong> (Mistakes). Especially convenient if you are looking to sort the words by the difficulty of memorising their articles.
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"change_words_in_collection"}
-                    title = {'Управление словами в коллекции'}
+                    title = {'Managing words in a collection'}
                     img = {[`${Config.uri}/res/docs/008.gif`]}
                     body = {[
                       <p>
-                        В коллекции слова расположены каждое в своем отдельном блоке, разделенных между собой горизонтальной линией. В блоке имеются следующие элементы: 
+                        The words in a collection are located in their own separate blocks, divided by a horizontal line. Each block contains the following elements: 
                       </p>,
                       <p>
-                        Само слово (немецкое существительное с артиклем). Тап по слову открывает окно со соответствующей словарной статьей и возможностью <a href="#translate_words_in_collection">изменения перевода</a> этого слова для <a href="#mainquiz">теста</a>. Слева от слова есть небольшой круглый индикатор. Если слово не прошло тест, то индикатор серого цвета, если слово прошло тест, то зеленого.
+                        The word itself (a German noun with its article). Tapping the word opens a window with the corresponding dictionary entry and the possibility <a href="#translate_words_in_collection">to alter the translation</a> of the word for the <a href="#mainquiz">quiz</a>. To the left of the word there is a small round indicator. If the word did not pass the quiz, the indicator is grey; if the word did pass the quiz, the indicator is green.
                       </p>,
                       <p>
-                        Далее идет транскрипция и перевод слова.
+                        The word is followed by its translation and transcription.
                       </p>,
                       <p>
-                        Ниже размещена статистика слова.  Первое значение это дробь, показывающая сколько раз подряд артикль для слова угадан в тесте (score) относительно числа удачных попыток, нужных для прохождения теста.  Число удачных попыток подряд, нужных для прохождения теста, выставляется в окне  <a href="#pref">«Настройки»</a> («Preferences») и может быть установлен в диапазоне от 1 до 9 (Maximum score count). При установке нового диапазона вся статистика для каждого слова в каждой из коллекций пересчитывается автоматически.
+                        Below that are the word statistics. The first value is a fraction, showing the amount of correct article guesses on the quiz (score) relative to the number of successful attempts required to pass the quiz. The number of successful consecutive attempts required to pass the quiz can be set in the <a href="#pref">«Preferences»</a> window and can be set to a value between 1 and 9 (Maximum score count). Upon setting a new value, all the statistics for each word is automatically recalculated.
                       </p>,
                       <p>
-                        Затем следуют элементы управления: <b>Display</b> — установка доступна только для слов, не прошедших тест. Она определяет будет ли это слово участвовать в тесте или нет. 
-                        <b>Refresh</b> — сброс всей статистики для каждого слова. При сбросе слово возвращается к своему состоянию, которое было при <a href="#choose_words_for_collection">добавлении его в коллекцию</a>. <b>Delete</b> — удаляет слово из коллекции.
+                        <strong>Following are the elements of management:</strong>
+                      </p>,
+                      <p>
+                        <strong>Display</strong> — a setting only available for words that did not pass the quiz. It determines whether the word will be a part of the quiz or not.
+                      </p>,
+                      <p>
+                        <strong>Refresh</strong> — resets all the statistics for the word. Upon refreshing, the word returns to its original state when <a href="#choose_words_for_collection">it was first added to the collection</a>.
+                      </p>,
+                      <p>
+                        <strong>Delete</strong> — removes the word from the collection..
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"translate_words_in_collection"}
-                    title = {'Изменение перевода слова'}
+                    title = {'Changing a word’s translation'}
                     img = {[
                       `${Config.uri}/res/docs/010.gif`,
                       `${Config.uri}/res/docs/009.gif`
                     ]}
                     body = {[
                       <p>
-                        Тап по слову открывает окно со соответствующей словарной статьей и возможностью изменения перевода этого слова для <a href="#mainquiz">теста</a>.  
+                        Tapping a word opens a window with the corresponding dictionary entry and the possibility to alter the translation of the word for the <a href="#mainquiz">quiz</a>.
                       </p>,
                       <p>
-                        При изменении перевода слова, справа от его значения (измененного) появляется красная метка «modifided».
+                        Upon changing a word’s translation, a red “modified” label will appear to the right of it.
                       </p>,
                       <p>
-                        Для возвращения к первоначальному значению слова достаточно просто очистить поле с пользовательским переводом.
+                        To return to the original translation of the word, simply clear the field with the custom translation.
                       </p>,
                       <p>
-                        При <a href="#menage_words_in_collection">сбросе статистики</a> («Refresh») первоначальное значение перевода для слова так же восстанавливается.
+                        Upon <a href="#menage_words_in_collection">resetting the word statistics</a> («Refresh»), the original translation for that particular word is also restored.
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"stats_words_in_collection"}
-                    title = {'Статистика слов в коллекции'}
+                    title = {'Word statistics in a collection'}
                     img = {[`${Config.uri}/res/docs/011.gif`]}
                     body = {[
                       <p>
-                        Статистика слов в коллекции состоит из двух индикаторов — верхнего и нижнего. 
+                        The word statistics in a collection consist of two indicators — the top one and the lower one. 
                       </p>,
                       <p>
-                        На <b>верхнем индикаторе</b> показана общая статистика слов в коллекции: 
+                        <strong>The top indicator</strong> shows the general word statistics in the collection: 
                       </p>,
                       <ul>
-                        <li>— их общее количество («words count»),</li>
-                        <li>— количество слов, прошедших <a href="#mainquiz">тест</a> («passed»),</li>
-                        <li>— количество слов, не прошедших <a href="#mainquiz">тест</a> ( «words left»),</li>
-                        <li>— графическое представление этой информации.</li>
+                        <li>— the total amount of words («words count»),</li>
+                        <li>— the number of words that have passed the quiz («passed»),</li>
+                        <li>— the number of words that have not passed the quiz ( «words left»),</li>
+                        <li>— a graphic representation of this information.</li>
                       </ul>,
                       <p>
-                        На <b>нижнем индикаторе</b> показана статистика для слов, которые еще не прошли <a href="#mainquiz">тест</a>:
+                        <strong>The lower indicator</strong> shows the statistics for the words that have not passed <a href="#mainquiz">the quiz</a> yet:
                       </p>,
                       <ul>
-                        <li>— общее количество слов, не прошедших <a href="#mainquiz">тест</a> («words left»),</li>
-                        <li>— количество слов, выбранных для <a href="#mainquiz">теста</a> (displayed),</li>
-                        <li>— количество слов, исключенных из <a href="#mainquiz">теста</a> (disabled),</li>
-                        <li>— графическое представление этой информации.</li>
+                        <li>— the total amount of words that have not passed the quiz («words left»),</li>
+                        <li>— the number of words selected for the quiz (displayed),</li>
+                        <li>— the number of words excluded from the quiz (disabled),</li>
+                        <li>— a graphic representation of this information.</li>
                       </ul>
                     ]}
                   />

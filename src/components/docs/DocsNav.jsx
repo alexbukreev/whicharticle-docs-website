@@ -18,9 +18,9 @@ class DocsNav extends Component {
             <ul className="section table-of-contents">
                 <li><a href="#getstarted">Getting started</a></li>
                 <li><a href="#maincollection">Collections</a></li>
-                <li><a href="#mainquiz">Тест</a></li>
-                <li><a href="#dict">Словарь</a></li>
-                <li><a href="#pref">Настройки</a></li>
+                <li><a href="#mainquiz">Quiz</a></li>
+                <li><a href="#dict">Dictionary</a></li>
+                <li><a href="#pref">Preferences</a></li>
             </ul>
         )
     }
