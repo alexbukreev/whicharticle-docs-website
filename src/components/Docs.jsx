@@ -219,7 +219,7 @@ class Docs extends Component {
                         <strong>Alphabetically</strong> (Noun).  
                       </p>,
                       <p>
-                        <strong>By the number of correct guesses in a row</strong> (Score). Especially convenient if you need to separate the words you have already know well from the words you don’t.
+                        <strong>By the number of correct guesses in a row</strong> (Score). Especially convenient if you need to separate the words you already know well from the words you don’t.
                       </p>,
                       <p>
                         <strong>By the number of mistakes</strong> (Mistakes). Especially convenient if you are looking to sort the words by the difficulty of memorising their articles.
@@ -314,110 +314,110 @@ class Docs extends Component {
 
                 <section id="mainquiz" className="section scrollspy">
                   <div>
-                    <h4>Тест</h4>
+                    <h4>Quiz</h4>
                       <p>
-                        Интерфейс теста доступен по тапу на кнопке «To Quiz» в окне коллекции (см. раздел <a href="#menage_words_in_collection">«Элементы управления коллекцией»</a>).
+                        The quiz interface is accessible by tapping the «To Quiz» button in the collection window (see <a href="#menage_words_in_collection">«Elements of collection management»</a>).
                       </p>
                       <p>
-                        Тест это то место, в котором происходит вся игра. Сейчас алгоритм реализации теста такой. Выбранные для теста слова предлагаются пользователю в произвольном порядке и сохраняют его в течении всего теста. 
+                        The quiz is where the entire game takes place. Right now the algorithm within the quiz is as follows: the words that have been selected for the quiz are offered to the user in in a random order, which is maintained throughout the entire quiz session.
                       </p>
                       <p>
-                        Сначала <a href="#beginquiz">слово отображается без артикля</a>. Пользователь должен его угадать путем выбора одного из трех артиклей. Затем слово отображается с правильным артиклем. Результат анализируется и записывается в статистику слова вверху. 
+                        At first <a href="#beginquiz">the word is displayed without the article</a>. The user has to guess it by picking one of the three given articles. After that, the word will be displayed with the correct article. The results are analysed and recorded in the word statistics above.
                       </p>
                       <p>
-                        В статистике показано количество слов, оставшихся в тесте («Words left»),  а также текущая статистика для слова. Подробней о статистике для слова смотрите в разделе <a href="#stats_words_in_collection">«Статистика слов в коллекции»</a>.
+                        The statistics display the amount of words left in the quiz («Words left»), as well as the statistics for the current word. For more details on word statistics, see the section <a href="#stats_words_in_collection">«Word statistics in a collection»</a>.
                       </p>
                       <p>
-                        Затем можно перейти к следующему слову в тесте, нажав на кнопку («Next») или сделав свайп в любом направлении.
+                        Afterwards you can proceed to the next word in the quiz by pressing the «Next» button or swiping in any direction.
                       </p>
                       <p>
-                        Тест можно прекратить в любой момент, просто выйдя из него. Результаты теста при этом сохранятся.
+                        You can stop the quiz at any time by simply exiting it. The quiz results will be saved automatically.
                       </p>
                       <h6 className="common-docs_content">Section contents</h6>
                       <ul>
-                        <li><a href="#beginquiz">Представление слова для угадывания</a></li>
-                        <li><a href="#quizwrong">Неверный результат</a></li>
-                        <li><a href="#quizok">Верный результат</a></li>
-                        <li><a href="#quizwordok">Слово выходит из квиза</a></li>
-                        <li><a href="#quiztotalok">Тест выполнен</a></li>
+                        <li><a href="#beginquiz">Displaying a word for guessing</a></li>
+                        <li><a href="#quizwrong">An incorrect guess</a></li>
+                        <li><a href="#quizok">A correct guess</a></li>
+                        <li><a href="#quizwordok">A word leaves the quiz</a></li>
+                        <li><a href="#quiztotalok">Successful completion of the quiz</a></li>
                       </ul>
                   </div>
 
                   <DocsBlock
                     id={"beginquiz"}
-                    title = {'Представление слова для угадывания'}
+                    title = {'Displaying a word for guessing'}
                     img = {[`${Config.uri}/res/docs/012.gif`]}
                     body = {[
                       <p>
-                        Слово отображается без артикля. Пользователь должен его угадать путем выбора одного из трех артиклей.  
+                        The word is displayed without the article. The user has to guess it by picking one of the three given articles.  
                       </p>,
                       <p>
-                        Под словом отображаются его транскрипция и перевод. Это отображение можно редактировать в окне <a href="#pref">«Настройки»</a> («Preferences») выставлением или убираем галочек напротив значений «Show transcription before guess» и «Show translation before guess».      
+                        Below the word, its transcription and translation are displayed. You can edit that display in the <a href="#pref">«Preferences»</a> window by ticking off the «Show transcription before guess» and «Show translation before guess» checkboxes.      
                       </p>,
                       <p>
-                        При отображении слова с артиклем (после попытки угадывания артикля), под словом так же отображаются его транскрипция и перевод, которые можно изменить в окне <a href="#pref">«Настройки»</a> («Preferences») выставлением или убираем галочек напротив значений «Show transcription after guess» и «Show translation after guess».
+                        When the word is displayed with the article (after an attempted article guess), its transcription and translation are also displayed below it. This can also be changed in the <a href="#pref">«Preferences»</a> window by ticking off the «Show transcription after guess» and «Show translation after guess» checkboxes.
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"quizwrong"}
-                    title = {'Неверный результат'}
+                    title = {'An incorrect guess'}
                     img = {[`${Config.uri}/res/docs/013.gif`]}
                     body = {[
                       <p>
-                        При неверном результате теста указанный пользователем артикль на кнопке выбора артикля подсвечивается красным цветом. В статистике число правильно попыток обнуляется, и добавляется ошибка к общему числу ошибок для этого слова («mistakes»). 
+                        If a guess in the quiz has been incorrect, the user-picked article button will be highlighted in red. In the statistics, the number of correct guesses will be reset to zero and a mistake point will be added to the total number of mistakes for the word.
                       </p>,
                       <p>
-                        Подробней о статистике для слова смотрите в разделе <a href="#stats_words_in_collection">«Статистика слов в коллекции»</a>. 
+                        For more details on word statistics, see the section <a href="#stats_words_in_collection">«Word statistics in a collection»</a>. 
                       </p>,
                       <p>
-                        Отображение транскрипции и значения слова можно изменить (см. <a href="#beginquiz">«Представление слова для угадывания»</a>).
+                        Word transcription and translation display can be edited (see <a href="#beginquiz">«Displaying a word for guessing»</a>).
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"quizok"}
-                    title = {'Верный результат'}
+                    title = {'A correct guess'}
                     img = {[`${Config.uri}/res/docs/014.gif`]}
                     body = {[
                       <p>
-                        При верно угаданном артикле кнопка выбора артикля подсвечивается зеленым цветом. В статистику добавляется число правильно попыток угадывания. 
+                        If an article in the quiz has been guessed correctly, the user-picked article button will be highlighted in green. In the statistics, a point will be added to the number of correct guesses. 
                       </p>,
                       <p>
-                        Если число удачных попыток подряд соответствует числу при котором слово считается угаданным, то <a href="#quizwordok">слово выходит из теста</a>. Если при этом это последнее слово в тесте, то открывается сообщение об <a href="#quiztotalok">успешном окончании теста</a>.
+                        If the number of correct guesses in a row is equal to the number at which the word is considered learned, <a href="#quizwordok">the word leaves the quiz</a>. If the word is also the last one in the quiz, a message indicating <a href="#quiztotalok">successful completion of the quiz</a> will pop up.
                       </p>,
                       <p>
-                        Подробней о статистике для слова смотрите в разделе <a href="#stats_words_in_collection">«Статистика слов в коллекции»</a>. 
+                        For more details on word statistics, see the section «Word statistics in a collection». 
                       </p>,
                       <p>
-                        Отображение транскрипции и значения слова можно изменить (см. <a href="#beginquiz">«Представление слова для угадывания»</a>).
+                        Word transcription and translation display can be edited (see <a href="#beginquiz">«Displaying a word for guessing»</a>).
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"quizwordok"}
-                    title = {'Слово выходит из теста'}
+                    title = {'A word leaves the quiz'}
                     img = {[`${Config.uri}/res/docs/015.gif`]}
                     body = {[
                       <p>
-                        Если число удачных попыток подряд соответствует числу при котором слово считается угаданным, то открывается соответствующее собщение и <a href="#quizwordok">слово выходит из теста</a>.  
+                        If the number of consecutive correct guesses is equal to the number at which the word is considered learned, a “Congratulations!” message will pop up and <a href="#quizwordok">the word will leave the quiz</a>.  
                       </p>,
                       <p>
-                        Подробней о статистике для слова смотрите в разделе <a href="#stats_words_in_collection">«Статистика слов в коллекции»</a>. 
+                        For more details on word statistics, see the section <a href="#stats_words_in_collection">«Word statistics in a collection»</a>. 
                       </p>
                     ]}
                   />
 
                   <DocsBlock
                     id={"quiztotalok"}
-                    title = {'Успешное окончание теста'}
+                    title = {'Successful completion of the quiz'}
                     img = {[`${Config.uri}/res/docs/016.gif`]}
                     body = {[
                       <p>
-                        Когда все слова в тесте угаданы, то открывается соответствующее собщение об успешном окончании теста.
+                        When all the words in the quiz have been guessed, a message indicating successful completion of the quiz will pop up.
                       </p>
                     ]}
                   />
@@ -483,7 +483,7 @@ class Docs extends Component {
 
                 <section id="pref" className="section scrollspy">
                   <div>
-                    <h4>Настройки</h4>
+                    <h4>Preferences</h4>
                     <div className="row">
                       <div className="col s12 m4 l4">
                           <p>
@@ -496,29 +496,29 @@ class Docs extends Component {
                       </div>
                       <div className="col s12 m8 l8">
                         <p>
-                          Интерфейс настроек доступен по тапу на «Preferences» в основном меню (см. раздел <a href="#firstview">«Первый экран приложения»</a>).
+                          The preferences interface is accessible by tapping the “Preferences” button in the main menu (see <a href="#firstview">«Application main screen»</a>).
                         </p>
                         <p>
-                          В настройках выделяется два блока. Первый блок относится к установкой пользователя в общем («User profile»), второй блок относится к установкам <a href="#mainquiz">«Теста»</a> («Quiz»).
+                          There are two blocks within the preferences. The first block relates to user profile management («User profile»), while the second block relates to quiz settings (<a href="#mainquiz">«Quiz»</a>).
                         </p>
                         <p>
-                          Блок настройки пользователя включает в себя два чекбокса: 
+                          The «User profile» block includes two checkboxes: 
                         </p>
                         <ul>
                           <li>— «Remember me»</li>
                           <li>— «Receive updates by e-mail»</li>
                         </ul>
                         <p>
-                          Мы рекомендуем оставить галочку напротив «Receive updates by e-mail», для того, что бы получать сообщения об обновлениях приложения, в том числе и связанных с его безопасностью. 
+                          We recommend you tick off the «Receive updates by e-mail» box in order to receive messages containing information about application updates, including security related ones.
                         </p>
                         <p>
-                          Также, вы сможете получать уведомления о технических работах на сервере и его доступности в то или иное время.
+                          You will also be able to receive notifications about any maintenance works on the server and its availability at the given moment.
                         </p>
                         <p>
-                          Ниже чекбоксов находится кнопка изменения пароля «Change Password». При ее нажатии открывается окно изменения пароля.
+                          Below the checkboxes there is a «Change Password» button. When pressed, the button opens the password change window.
                         </p>
                         <p>
-                          Блок <a href="#mainquiz">«Теста»</a> («Quiz») включает в себя четыре чекбокса, значения которых подробно описаны в разделе <a href="#beginquiz">«Представление слова для угадывания»</a>. Далее следует выпадающее меню в котором можно установить значение последовательных угадываний (без ошибок) артиклей для слова, после которого слово считается выученным. Подробнее смотрите раздел <a href="#change_words_in_collection">«Управление словами в коллекции»</a>.
+                          The <a href="#mainquiz">«Quiz»</a> block includes four checkboxes, which are discussed in detail in the <a href="#beginquiz">«Displaying a word for guessing»</a> section. Below them there is a drop-down menu, in which you can set the number of consecutive article guesses (without mistakes) for the word, after which the word is considered well-learned. For more details refer to the <a href="#change_words_in_collection">«Managing words in a collection»</a> section.
                         </p>
                       </div>
                     </div>
