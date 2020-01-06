@@ -17,27 +17,28 @@ class Footer extends Component {
           <div className="row">
             <div className="col l6 s12">
               <h5 className="white-text">Contact</h5>
-              <a className="grey-text text-lighten-3" href="mailto: info@whicharticle.com">
-                info@whicharticle.com
-              </a>
-            </div>
-            <div className="col l4 offset-l2 s12">
-              <h5 className="white-text">Other</h5>
-              <a className="grey-text text-lighten-3" href="https://play.google.com/store/apps/details?id=com.whicharticle.derdiedas">
-                Google play
-              </a>
-              {/* <ul>
+              <ul>
                 <li>
-                  <a className="grey-text text-lighten-3" href="#!">
-                    Facebook Group
+                  <a className="grey-text text-lighten-3" href="mailto: info@whicharticle.com">
+                    info@whicharticle.com
                   </a>
                 </li>
+              </ul>
+            </div>
+            <div className="col l4 offset-l2 s12">
+              <h5 className="white-text">Links</h5>
+              <ul>
                 <li>
                   <a className="grey-text text-lighten-3" href="https://play.google.com/store/apps/details?id=com.whicharticle.derdiedas">
                     Google play
                   </a>
                 </li>
-              </ul> */}
+                <li>
+                  <a className="grey-text text-lighten-3" href="https://www.facebook.com/whicharticle">
+                    Facebook Group
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

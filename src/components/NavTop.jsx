@@ -55,6 +55,14 @@ class NavTop extends Component {
                     Privacy policy
                   </Link>
                 </li>
+                <li>
+                  |
+                </li>
+                <li>
+                  <Link to={'/ru'}>
+                    Ru
+                  </Link>
+                </li>
               </ul>
             </div>
           </nav>
@@ -80,6 +88,12 @@ class NavTop extends Component {
           <li onClick = {() => this.sidenav.close()}>
             <Link to={'/privacy'}>
               Privacy policy
+            </Link>
+          </li>
+          <hr/>
+          <li onClick = {() => this.sidenav.close()}>
+            <Link to={'/ru'}>
+              Ru
             </Link>
           </li>
         </ul>

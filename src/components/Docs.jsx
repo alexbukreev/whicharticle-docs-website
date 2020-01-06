@@ -124,7 +124,7 @@ class Docs extends Component {
                   <div>
                     <h4>Collections</h4>
                     <p>
-                      The «Collections» interface is the starting interface of the app. It contains all the collections created by the user.
+                      The «Collections» interface is the starting interface of the application. It contains all the collections created by the user.
                     </p>
                     <h6 className="common-docs_content">Section contents</h6>
                     <ul>
@@ -271,7 +271,7 @@ class Docs extends Component {
                         Tapping a word opens a window with the corresponding dictionary entry and the possibility to alter the translation of the word for the <a href="#mainquiz">quiz</a>.
                       </p>,
                       <p>
-                        Upon changing a word’s translation, a red “modified” label will appear to the right of it.
+                        Upon changing a word’s translation, a red «modified» label will appear to the right of it.
                       </p>,
                       <p>
                         To return to the original translation of the word, simply clear the field with the custom translation.
@@ -403,7 +403,7 @@ class Docs extends Component {
                     img = {[`${Config.uri}/res/docs/015.gif`]}
                     body = {[
                       <p>
-                        If the number of consecutive correct guesses is equal to the number at which the word is considered learned, a “Congratulations!” message will pop up and <a href="#quizwordok">the word will leave the quiz</a>.  
+                        If the number of consecutive correct guesses is equal to the number at which the word is considered learned, a «Congratulations!» message will pop up and <a href="#quizwordok">the word will leave the quiz</a>.  
                       </p>,
                       <p>
                         For more details on word statistics, see the section <a href="#stats_words_in_collection">«Word statistics in a collection»</a>. 
@@ -425,55 +425,55 @@ class Docs extends Component {
 
                 <section id="dict" className="section scrollspy">
                   <div>
-                    <h4>Словарь</h4>
+                    <h4>Dictionary</h4>
                         <div className="row">
                           <div className="col s12 m4 l4">
                               <p>
                                   <img 
                                       className="responsive-img z-depth-3 materialboxed" 
                                       src={`${Config.uri}/res/docs/018.gif`}
-                                      alt='Словарь'
+                                      alt='Dictionary'
                                   />
                               </p>
                               <p>
                                   <img 
                                       className="responsive-img z-depth-3 materialboxed" 
                                       src={`${Config.uri}/res/docs/020.gif`}
-                                      alt='Словарь'
+                                      alt='Dictionary'
                                   />
                               </p>
                           </div>
                           <div className="col s12 m8 l8">
                               <p>
-                                Интерфейс словаря доступен по тапу на «Dictionary» в основном меню (см. раздел <a href="#firstview">«Первый экран приложения»</a>).
+                                The dictionary interface is accessible by tapping the «Dictionary» button in the main menu (see <a href="#firstview">«Application main screen»</a>).
                               </p>
                               <p>
-                                В словаре представлены все существительные, доступные в приложении. На верху слева показано текущее число таких существительных («Total nouns»). 
+                                The dictionary contains all the nouns available in the application. The current number of such nouns is displayed on the top left («Total nouns»).
                               </p>
                               <p>
-                                В словаре реализован удобный поиск по первой букве слова и с помощью побуквенного ввода.
+                                The dictionary implements a convenient search by the first letter of the word, as well as letter-by-letter input.
                               </p>
                               <p>
-                                При тапе на самом слове открывается соответствующая словарная статья.
+                                When you tap on the word itself, the corresponding dictionary entry will open.
                               </p>
                               <p>
-                                Каждый пользователь также может добавлять в общий словарь недостающие в нем существительные. Для этого надо нажать на круглую кнопку справа вверху окна со знаком «+». При этом откроется форма ввода слова для добавления в словарь. После попытки такого добавления запрос отправляется на сервер на котором хранится общий словарь. Тут возможны следующие варианты:
+                                Every user can also add any missing nouns to the dictionary. In order to do that, press the round button on the top right with a «+» on it. This will open an entry field for adding new words to the dictionary. After an attempt to add a word, a request will be sent to the server on which the main dictionary is stored. Afterwards, the following scenarios are possible:
                               </p>
                               <ol>
                                 <li>
-                                  Добавляемое слово уже существует в словаре приложения. В этом случае приложение выведет сообщение «The word {'<слово>'} already exists in this dictionary» и в интерфейсе словаря произойдет автоматический переход к этому слову.
+                                  The word you are attempting to add already exists in the application dictionary. In this case, the application will display a «The word <i>”word”</i> already exists in this dictionary» message, while the dictionary interface transitions to the word automatically.
                                 </li>
                                 <br/>
                                 <li>
-                                  Добавляемое слово не существует в словаре приложения, но имеется на сервере в общем словаре. Если это слово имеет формы существительного, то оно добавляется в словарь приложения. В этом случае приложение выведет сообщение «The word {'<слово>'} has been added to this dictionary» и в интерфейсе словаря произойдет автоматический переход к этому слову.
+                                  The word you are attempting to add does not exist in the application dictionary, but is available in the main dictionary on the server. If the word has a form of a noun, it will be added to the application dictionary. In this case, the application will display a «The word <i>”word”</i> has been added to this dictionary» message, while the dictionary interface transitions to the word automatically.
                                 </li>
                                 <br/>
                                 <li>
-                                  Добавляемое слово не существует в словаре приложения и не содержится в общем словаре на сервере. В этом случае приложение выведет сообщение «The word {'<слово>'} is missing from the main dictionary on the server and cannot be added».
+                                  The word you are attempting to add does not exist in the application dictionary is not available in the main dictionary on the server. In this case, the application will display a «The word <i>”word”</i> is missing from the main dictionary on the server and cannot be added» message.
                                 </li>
                                 <br/>
                                 <li>
-                                  Добавляемое слово не существует в словаре приложения и является инфинитивом (отглагольным существительным). В ряде случаев такое слово не будет добавляться в словарь приложения и выводится сообщение «The word {'<слово>'} is an infinitive (verb) used as a noun. Words like this (Fahren, Trinken, etc.) always have «Das» as their article»
+                                  The word you are attempting to add does not exist in the application dictionary and is a German infinitive (a verbal noun). In most cases, such a word will not be added to the application dictionary, and the application will display a «The word <i>”word”</i> is an infinitive (verb) used as a noun. Words like this (Fahren, Trinken, etc.) always have «Das» as their article» message.
                                 </li>
                               </ol>
                           </div>
@@ -496,7 +496,7 @@ class Docs extends Component {
                       </div>
                       <div className="col s12 m8 l8">
                         <p>
-                          The preferences interface is accessible by tapping the “Preferences” button in the main menu (see <a href="#firstview">«Application main screen»</a>).
+                          The preferences interface is accessible by tapping the «Preferences» button in the main menu (see <a href="#firstview">«Application main screen»</a>).
                         </p>
                         <p>
                           There are two blocks within the preferences. The first block relates to user profile management («User profile»), while the second block relates to quiz settings (<a href="#mainquiz">«Quiz»</a>).
