@@ -11,3 +11,5 @@ Adaptive layout.
 * Materialize
 
 [Application page «Which Article – Der, Die, Das» on GooglePlay.](https://play.google.com/store/apps/details?id=com.whicharticle.derdiedas)
+
+[Facebook Group](https://www.facebook.com/whicharticle)
